@@ -24,55 +24,38 @@ Open [http://localhost:5173](http://localhost:5173)
 ```
 src/
 ├── api/
-│   └── index.js              # All backend API calls
+│   └── index.js              
 ├── components/
 │   ├── auth/
-│   │   ├── LoginForm.jsx     # Login form
-│   │   └── RegisterForm.jsx  # Registration form
+│   │   ├── LoginForm.jsx     
+│   │   └── RegisterForm.jsx  
 │   ├── layout/
-│   │   └── Header.jsx        # Top navigation bar
+│   │   └── Header.jsx        
 │   ├── transaction/
-│   │   ├── SendMoneyModal.jsx # Send money dialog
-│   │   ├── TransactionList.jsx# Tx history with tabs
-│   │   └── TransactionRow.jsx # Single tx row
+│   │   ├── SendMoneyModal.jsx 
+│   │   ├── TransactionList.jsx# 
+│   │   └── TransactionRow.jsx 
 │   ├── ui/
-│   │   ├── Button.jsx        # Reusable button
-│   │   ├── Icon.jsx          # SVG icon set
-│   │   ├── Input.jsx         # Form input with label/error
-│   │   ├── Modal.jsx         # Modal wrapper
-│   │   ├── Spinner.jsx       # Loading spinner
-│   │   └── Toast.jsx         # Toast notifications
+│   │   ├── Button.jsx       
+│   │   ├── Icon.jsx         
+│   │   ├── Input.jsx        
+│   │   ├── Modal.jsx         
+│   │   ├── Spinner.jsx     
+│   │   └── Toast.jsx      
 │   └── wallet/
-│       ├── AddMoneyModal.jsx  # Add money dialog
-│       ├── BalanceCard.jsx    # Wallet balance card
-│       └── QuickActions.jsx   # Send/Add action tiles
+│       ├── AddMoneyModal.jsx  
+│       ├── BalanceCard.jsx    
+│       └── QuickActions.jsx  
 ├── hooks/
-│   ├── useToast.js           # Toast state manager
-│   └── useWallet.js          # Wallet + tx data fetching
+│   ├── useToast.js        
+│   └── useWallet.js        
 ├── pages/
-│   ├── AuthPage.jsx          # Login / Register page
-│   └── DashboardPage.jsx     # Main dashboard
+│   ├── AuthPage.jsx          
+│   └── DashboardPage.jsx    
 ├── styles/
-│   └── global.css            # CSS variables + resets
-├── utils.js                  # Formatters & validators
-├── App.jsx                   # Root component
-└── main.jsx                  # Entry point
+│   └── global.css            
+├── utils.js            
+├── App.jsx            
+└── main.jsx         
 ```
 
-## API Endpoints Used
-
-| Component         | Method | Endpoint                          |
-|-------------------|--------|-----------------------------------|
-| LoginForm         | POST   | `/api/users/login`                |
-| RegisterForm      | POST   | `/api/users/register`             |
-| BalanceCard       | GET    | `/api/wallet/{upiId}`             |
-| AddMoneyModal     | POST   | `/api/wallet/add`                 |
-| SendMoneyModal    | POST   | `/api/transaction/send`           |
-| TransactionList   | GET    | `/api/transaction/history/{upiId}`|
-
-## Tech Stack
-
-- **React 18** with hooks
-- **Vite** (dev server + proxy)
-- **CSS Modules** (scoped styling, no extra libraries)
-- **DM Sans** + **Syne** fonts (Google Fonts)
